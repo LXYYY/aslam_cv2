@@ -169,9 +169,9 @@ TargetObservation::Ptr DetectorAprilGrid::detectTargetInImage(const cv::Mat& ima
         }
 
         cv::putText(image_copy, "Duplicate Apriltags detected. Hide them.", cv::Point(50, 50),
-                    CV_FONT_HERSHEY_SIMPLEX, 0.8, CV_RGB(255, 0, 0), 2, 8, false);
+                    cv::FONT_HERSHEY_SIMPLEX, 0.8, CV_RGB(255, 0, 0), 2, 8, false);
         cv::putText(image_copy, "Press enter to exit...", cv::Point(50, 80),
-                    CV_FONT_HERSHEY_SIMPLEX, 0.8, CV_RGB(255, 0, 0), 2, 8, false);
+                    cv::FONT_HERSHEY_SIMPLEX, 0.8, CV_RGB(255, 0, 0), 2, 8, false);
         cv::imshow("Duplicate Apriltags detected. Hide them", image_copy);
         cv::waitKey();
 

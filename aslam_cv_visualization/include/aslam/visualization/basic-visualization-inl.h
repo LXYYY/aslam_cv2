@@ -22,7 +22,7 @@ inline void visualizeMatchesWithoutScore(
     const aslam::Matches& matches, cv::Mat* image) {
   CHECK_NOTNULL(image);
 
-  cv::cvtColor(frame_kp1.getRawImage(), *image, CV_GRAY2BGR);
+  cv::cvtColor(frame_kp1.getRawImage(), *image, cv::COLOR_GRAY2BGR);
   CHECK_NOTNULL(image->data);
   drawKeypointMatches(
       frame_kp1, frame_k, matches, cv::Scalar(255, 255, 0),

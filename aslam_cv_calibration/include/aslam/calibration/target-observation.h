@@ -100,7 +100,7 @@ class TargetObservation {
     for (size_t idx = 0u; idx < num_corners; ++idx) {
       cv::circle(
           *out_image, cv::Point(image_corners_(0, idx), image_corners_(1, idx)),
-          1.0, cv::Scalar(0, 0, 255), 2, CV_AA);
+          1.0, cv::Scalar(0, 0, 255), 2, cv::LINE_AA);
     }
   }
 
