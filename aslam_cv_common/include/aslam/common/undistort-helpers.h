@@ -29,7 +29,7 @@ static void getUndistortRectangles(const DerivedCameraType& input_camera, bool u
                                    cv::Rect_<float>& inner, cv::Rect_<float>& outer) {
   const int N = 9;
   int x, y, k;
-  cv::Ptr<CvMat> _pts(cvCreateMat(1, N * N, CV_32FC2));
+  cv::Ptr<cv::Mat> _pts(new cv::Mat(1, N * N, CV_32FC2));
   CvPoint2D32f* pts = (CvPoint2D32f*) (_pts->data.ptr);
 
   for (y = k = 0; y < N; y++) {

@@ -158,7 +158,7 @@ TargetObservation::Ptr DetectorAprilGrid::detectTargetInImage(const cv::Mat& ima
         cvStartWindowThread();
 
         cv::Mat image_copy = image.clone();
-        cv::cvtColor(image_copy, image_copy, CV_GRAY2RGB);
+        cv::cvtColor(image_copy, image_copy, cv::COLOR_GRAY2RGB);
 
         // Mark all duplicate tags in the image.
         for (size_t inner_tag_idx = 0; inner_tag_idx < detections.size() - 1; ++inner_tag_idx) {
